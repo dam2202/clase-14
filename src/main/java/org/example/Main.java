@@ -5,13 +5,13 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-         final String regex = "(([a-z]|[0-9])+@[a-z]+\\-[a-z]+)";
-         final String string = "ramonperez@gmail.com";
+        // final String regex = "(([a-z]|[0-9])+@[a-z]+\\.[a-z]+)";
+        // final String string = "ramonperez@gmail.com";
 
-        System.out.println(string.matches(regex)); // string.matches(regex) devuelve true o false
+        //System.out.println(string.matches(regex)); // string.matches(regex) devuelve true o false
 
-        final String regex2 = ".* (([a-z]|[0-9])+@[a-z]+\\-[a-z]+).* ([0-9]+)$";
-        final String string2 = "Maria es docente, su email es maria123@gmail.com y su DNI es 31605906";
+        final String regex = ".* (([a-z]|[0-9])+@[a-z]+\\.[a-z]+).* ([0-9]+)$";
+        final String string = "Maria es docente, su email es maria123@gmail.com y su DNI es 31605906";
 
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(string);
